@@ -144,4 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loginForm) {
         loginForm.addEventListener("submit", login);
     }
+
+    // Verificar se é a primeira vez que index.html é carregado
+    const isFirstLoad = localStorage.getItem('firstLoad') === null;
+    if (isFirstLoad) {
+        localStorage.removeItem('markers');
+        localStorage.setItem('firstLoad', 'false');
+    }
 });
