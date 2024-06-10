@@ -64,33 +64,60 @@ if (window.location.pathname.includes("app.html")) {
                 preConfirm: () => {
                     const title = document.getElementById('swal-input1').value;
                     const description = document.getElementById('swal-input2').value;
-                    saveMarker(map, layer, title, description); // Passar o mapa como argumento
+                    saveMarker(map, layer, title, description, username); // Passar o nome do usuário como argumento
                 }
             });
         });
+
+        // Função para salvar o marcador
+        function saveMarker(map, layer, title, description, createdBy) { // Adicionar createdBy como argumento
+            // Criar conteúdo do pop-up do marcador
+            const popupContent = `
+                <b>Título:</b> ${title}<br>
+                <b>Descrição:</b> ${description}<br>
+                <b>Criado por:</b> ${createdBy}<br> <!-- Usar createdBy aqui -->
+                <b>Criado em:</b> ${new Date().toLocaleString()}<br><br>
+                <button id="closePopupBtn">OK</button>
+            `;
+
+            // Definir conteúdo do pop-up do marcador
+            layer.bindPopup(popupContent).openPopup();
+
+            // Adicionar o marcador ao mapa
+            map.addLayer(layer);
+
+            // Fechar o popup quando o botão OK for clicado
+            layer.on('popupopen', function () {
+                document.getElementById('closePopupBtn').addEventListener('click', function () {
+                    map.closePopup();
+                });
+            });
+
+            // Salvar as informações do marcador em localStorage
+            const markers = JSON.parse(localStorage.getItem('markers')) || [];
+            markers.push({
+                latlng: layer.getLatLng(),
+                title: title,
+                description: description,
+                createdBy: createdBy, // Salvar o nome do usuário que criou o marcador
+                createdAt: new Date().toLocaleString()
+            });
+            localStorage.setItem('markers', JSON.stringify(markers));
+        }
+
+        // Carregar os marcadores salvos em localStorage ao carregar a página
+        const markers = JSON.parse(localStorage.getItem('markers')) || [];
+        markers.forEach(function (marker) {
+            const markerLayer = L.marker(marker.latlng);
+            saveMarker(map, markerLayer, marker.title, marker.description, marker.createdBy); // Passar createdBy como argumento
+        });
+
     } else {
         // Se não estiver logado, redirecionar para a página de login
         window.location.href = "index.html";
     }
 }
 
-// Função para salvar o marcador
-function saveMarker(map, layer, title, description) { // Receber o mapa como argumento
-    // Criar conteúdo do pop-up do marcador
-    const popupContent = `
-        <b>Título:</b> ${title}<br>
-        <b>Descrição:</b> ${description}<br>
-        <b>Criado por:</b> ${localStorage.getItem("username")}<br>
-        <b>Criado em:</b> ${new Date().toLocaleString()}<br><br>
-        <button onclick="map.closePopup()">OK</button>
-    `;
-
-    // Definir conteúdo do pop-up do marcador
-    layer.bindPopup(popupContent).openPopup();
-
-    // Adicionar o marcador ao mapa
-    map.addLayer(layer);
-}
-
 // Adicionar o ouvinte de evento para o formulário de login
 document.getElementById("loginForm").addEventListener("submit", login);
+
