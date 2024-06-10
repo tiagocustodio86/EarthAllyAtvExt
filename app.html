@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <!-- Incluir Leaflet.js a partir do CDN sem integridade -->
+    <!-- Incluir Leaflet.js a partir do CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <!-- Incluir Leaflet.draw a partir do CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css">
+    <!-- Incluir Sweet Alert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        /* Estilos personalizados podem ser adicionados aqui */
+    </style>
 </head>
 <body>
     <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
     <button onclick="logout()">Logout</button>
 
-    <div id="map" style="height: 400px;"></div>
+    <!-- Map container -->
+    <div id="map" style="height: 500px;"></div>
 
-    <!-- Incluir Leaflet.js a partir do CDN sem integridade -->
+    <!-- Incluir Leaflet.js a partir do CDN -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Incluir Leaflet.draw a partir do CDN -->
+    <script src="https://unpkg.com/leaflet-draw"></script>
+    <!-- Incluir Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js"></script>
 </body>
 </html>
