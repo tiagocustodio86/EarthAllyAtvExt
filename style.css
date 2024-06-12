@@ -1,0 +1,42 @@
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-header {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.card-body {
+    background-color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+#map {
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
