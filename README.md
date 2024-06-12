@@ -54,3 +54,11 @@ Login:
 - Use uma das credenciais de usuário predefinidas para fazer login (por exemplo, username: admin, password: admin).
 Interação com o Mapa:
 - Após um login bem-sucedido, você poderá criar e gerenciar marcadores no mapa interativo.
+
+### Exemplos
+- Criação de marcador no mapa (o usuário pode excluir somente o seu próprio marcador)
+- ![image](https://github.com/tiagocustodio86/EarthAllyAtvExt/assets/172204996/bed04f14-16a5-4745-9fef-dbb20890a9f6)
+- Consulta de marcação de outros usuários
+- ![image](https://github.com/tiagocustodio86/EarthAllyAtvExt/assets/172204996/595a331f-4826-42b5-8bb1-1de32a9132ca)
+
+
