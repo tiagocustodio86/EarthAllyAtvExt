@@ -16,7 +16,7 @@ Frontend:
 - Bootstrap 4.5 para design responsivo
 - Leaflet para mapas interativos
 - Leaflet Draw para criação de marcadores
-- SweetAlert2 para prompts de entrada de usuário aprimorados
+- SweetAlert2 para prompts de entrada de usuário aprimorados  
 Backend (possibilidades para futura integração):  
 - .NET
 - Spring
