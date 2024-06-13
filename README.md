@@ -52,7 +52,7 @@ Abra o index.html no seu navegador preferido:
 ### Uso
 Login:
 - Use uma das credenciais de usuário predefinidas para fazer login (por exemplo, username: admin, password: admin).
-Interação com o Mapa:
+Interação com o Mapa:  
 - Após um login bem-sucedido, você poderá criar e gerenciar marcadores no mapa interativo.
 
 ### Exemplos
