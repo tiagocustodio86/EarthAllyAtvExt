@@ -61,6 +61,9 @@ Tela de login
 Criação de marcador no mapa (o usuário pode excluir somente o seu próprio marcador)  
 ![image](https://github.com/tiagocustodio86/EarthAllyAtvExt/assets/172204996/bed04f14-16a5-4745-9fef-dbb20890a9f6)
 Consulta de marcação de outros usuários  
-![image](https://github.com/tiagocustodio86/EarthAllyAtvExt/assets/172204996/595a331f-4826-42b5-8bb1-1de32a9132ca)
+![image](https://github.com/tiagocustodio86/EarthAllyAtvExt/assets/172204996/06545421-d1cb-423f-a430-155f31997fce)
+Criação de polígonos pra marcar áreas maiores
+![image](https://github.com/tiagocustodio86/EarthAllyAtvExt/assets/172204996/725d3e75-a4b1-4a38-a7ba-a256dffb56e6)
+
 
 
